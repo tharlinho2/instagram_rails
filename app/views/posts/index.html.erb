@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<main class="posts-page container">
+  <section class="posts">
+    <% if @posts.any? %>
+      <%= render @posts %>
+    <% else %>
+      Nenhum post encontrado! 😐
+    <% end %>
 
-<h1>Posts</h1>
+  </section>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
+  <aside>
+    sidebar
 
-<%= link_to "New post", new_post_path %>
+    <section class="suggestions">
+      <h4>Sugestôes Para Você</h4>
+    </section>
+
+    <footer>
+      © <%= Date.current.year %> INSTAGRAM CLONE
+    </footer>
+  </aside>
+</main>
