@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if current_user.update(user_params)
       redirect_to root_path, notice: "Seu perfil foi atualizado com sucesso"
     else
-      flash[:alert] = current_user.errors.full_messages.to_sentence
+      flash.now[:alert] = current_user.errors.full_messages.to_sentence
       render :edit
     end
   end
