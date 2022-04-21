@@ -16,3 +16,4 @@ ActiveStorage.start();
 import "../src/application.css";
 import "./flashMessages.js"
 import "./modal.js"
+import "./likes.js"
